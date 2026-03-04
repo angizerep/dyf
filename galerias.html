@@ -5,7 +5,80 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Galerías — Imágenes de entregables</title>
-  <link rel="stylesheet" href="assets/css/minimal.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial;
+      background: #0b0f17;
+      color: #e5e7eb;
+    }
+
+    a {
+      color: #38bdf8;
+      text-decoration: none;
+    }
+
+    .wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 10px 12px;
+      border-radius: 999px;
+      border: 1px solid #1f2937;
+      background: rgba(255, 255, 255, .04);
+      color: #e5e7eb;
+      font-weight: 700;
+    }
+
+    .muted {
+      color: #9ca3af;
+    }
+
+    .grid {
+      margin-top: 14px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 12px;
+    }
+
+    .card {
+      border: 1px solid #1f2937;
+      border-radius: 16px;
+      background: rgba(255, 255, 255, .03);
+      overflow: hidden;
+    }
+
+    .card:hover {
+      border-color: rgba(56, 189, 248, .35);
+    }
+
+    img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      display: block;
+      background: rgba(0, 0, 0, .15);
+    }
+
+    .body {
+      padding: 12px;
+    }
+
+    .body b {
+      display: block;
+    }
+  </style>
 </head>
 
 <body>
