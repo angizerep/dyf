@@ -1,89 +1,355 @@
-# El Sincronizador de la Nueva Florencia
-## Códice Maestro — Dossier Integrador para Due Diligence
+<!doctype html>
+<html lang="es">
 
-> **Propósito:** este portal consolida la evidencia **técnica, financiera y social** del proyecto para una “Defensa bajo Fuego” ante un Sínodo (CISO, Operaciones, Fondo de Inversión, Líder Comunitario).
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>El Sincronizador — Códice Maestro (GitHub Pages)</title>
+    <meta name="description"
+        content="Portal estático (GitHub Pages) del Códice Maestro: auditoría técnica, financiera y social del Sincronizador de la Nueva Florencia." />
+    <link rel="stylesheet" href="assets/css/portal.css">
+</head>
 
----
+<body>
+    <div class="wrap">
+        <div class="topbar">
+            <div class="brand">
+                <div class="logo" aria-hidden="true"></div>
+                <div>
+                    <h1>El Sincronizador — Códice Maestro</h1>
+                    <p>Portal estático (GitHub Pages) · Basado en Actividades 3–7 (PDF + evidencias)</p>
+                </div>
+            </div>
+            <div class="actions">
+                <button class="btn primary" id="btnPrint" title="Imprimir / guardar como PDF">🖨️ Exportar</button>
+                <button class="btn good" id="btnOpenEvidence" title="Ir a evidencias">📎 Evidencias</button>
+                <a class="btn" href="arquitectura.html" title="Página de arquitectura">🧩 Arquitectura</a>
+                <button class="btn" id="btnTheme" title="Cambiar tema">🌓 Tema</button>
+            </div>
+        </div>
 
-## Resumen ejecutivo (1 minuto)
-**Problema:** La central de abastos “La Nueva Florencia” enfrenta congestión, tiempos muertos, fricción operativa y riesgos de trazabilidad, con impacto directo en costos, productividad y clima laboral.  
-**Solución:** **El Sincronizador** integra estación física + sensores + middleware + aplicaciones para coordinar turnos, registrar eventos de carga y sostener operación resiliente (incluyendo **modo manual**).  
-**Resultado esperado:** aumento de throughput, reducción de tiempos, trazabilidad auditada y un modelo de adopción justo para los trabajadores.
+        <div class="grid">
+            <aside class="side">
+                <h2>Navegación</h2>
+                <nav class="nav" id="nav">
+                    <a href="#inicio" data-target="inicio" class="active">Inicio <small>Resumen y acceso
+                            rápido</small></a>
+                    <a href="#blueprints" data-target="blueprints">Blueprints <small>Arquitectura + CAD +
+                            flujo</small></a>
+                    <a href="#modelos" data-target="modelos">Modelos 3D <small>Demo GLB (reemplazable)</small></a>
+                    <a href="#evidencias" data-target="evidencias">Evidencias <small>PDF (Actividades)</small></a>
+                    <a href="#imagenes" data-target="imagenes">Imágenes <small>Arquitectura y prototipo</small></a>
+                </nav>
 
-**Estado del proyecto:** __Prototipo validado / piloto / listo para escalado__  
-**Escalado objetivo:** __25 estaciones simultáneas__  
-**Horizonte:** __12–24 meses__
+                <div class="meta">
+                    <div><b>Modo:</b> 100% estático (sin backend)</div>
+                    <div><b>Carpetas:</b> <span class="mono">assets/deliverables · assets/models · assets/images</span>
+                    </div>
+                    <div style="margin-top:8px;">
+                        <b>Nota:</b> los PDFs fueron generados a partir de los documentos Word entregados (fuente externa, no versionada en este repositorio).
+                    </div>
+                </div>
+            </aside>
 
----
+            <main class="main">
+                <section class="card section" id="inicio">
+                    <h3>Inicio</h3>
+                    <p>
+                        Este repositorio es un <b>portal interactivo</b> (GitHub Pages) del “Códice Maestro”.
+                        Incluye los entregables en <b>PDF</b> y las imágenes
+                        extraídas de los documentos.
+                    </p>
 
-## Lectura por rol del Sínodo (ruta rápida)
-| Rol | Qué le importa | Ir directo a |
-|---|---|---|
-| **CISO** | hackeo, integridad, continuidad, auditoría | [Arquitectura de Sistemas](01-blueprints/arquitectura.md) · [BCP + Ética](03-despliegue-resiliencia/index.md) |
-| **Operaciones Logísticas** | durabilidad, mantenimiento, flujo, estaciones | [Modelos 3D](01-blueprints/modelos-3d.md) · [Blueprints](01-blueprints/index.md) |
-| **Fondo de inversión** | TCO, ROI, sensibilidad, escalabilidad | [Blindaje](02-blindaje/index.md) · [Entregables](evidencias/entregables.md) |
-| **Líder comunitario** | sesgos, justicia, ganancia compartida | [BCP + Ética](03-despliegue-resiliencia/index.md) · [Cierre](04-cierre/index.md) |
+                    <div class="hero">
+                        <div class="heroImg"
+                            title="Arquitectura / flujo de interoperabilidad (extraído de Actividad 6)">
+                            <img src="assets/images/arquitectura.png"
+                                alt="Arquitectura: estación → preprocesamiento → middleware → adaptador legacy" />
+                        </div>
+                        <div>
+                            <div class="kpiGrid">
+                                <div class="kpi"><b>Entregables</b><span>Actividad 3–7 (PDF)</span></div>
+                                <div class="kpi"><b>Arquitectura</b><span>Estación → Middleware → Legacy</span></div>
+                                <div class="kpi"><b>Modelo 3D</b><span>Demo GLB incluido (reemplazar)</span></div>
+                                <div class="kpi"><b>Imágenes</b><span>Extraídas de los documentos</span></div>
+                            </div>
+                            <div class="hr"></div>
+                            <div class="mono">
+                                Para publicar en GitHub Pages:
+                                <br />Settings → Pages → Deploy from a branch → Branch: <b>main</b> · Folder:
+                                <b>/(root)</b>
+                                <br />Este portal carga desde <b>index.html</b> en la raíz.
+                            </div>
+                        </div>
+                    </div>
 
----
+                    <div class="hr"></div>
+                    <div class="actions">
+                        <a class="btn good" href="assets/deliverables/Actividad_7.pdf" target="_blank" rel="noopener">📄
+                            Abrir Códice Final (PDF)</a>
+                        <a class="btn primary" href="#evidencias">📎 Ver evidencias</a>
+                    </div>
+                </section>
 
-## Qué encontrarás en este portal
-### 1) Manifiesto de Innovación
-- Problema y contexto
-- Propuesta de valor
-- KPIs y beneficios esperados
-- Pitch Deck (12 diapositivas)
+                <section class="card section" id="blueprints">
+                    <h3>Blueprints (extracto visual)</h3>
+                    <p>Imágenes relevantes extraídas de los documentos: prototipo, flujo operativo PoC, y CAD de la
+                        estación.</p>
+                    <div class="actions" style="margin-bottom:10px;">
+                        <a class="btn" href="arquitectura.html">🧩 Abrir página de arquitectura</a>
+                        <a class="btn" href="assets/deliverables/Actividad_3.pdf" target="_blank" rel="noopener">📄
+                            Actividad 3 (PDF)</a>
+                        <a class="btn" href="assets/deliverables/Actividad_4.pdf" target="_blank" rel="noopener">📄
+                            Actividad 4 (PDF)</a>
+                        <a class="btn" href="assets/deliverables/Actividad_6.pdf" target="_blank" rel="noopener">📄
+                            Actividad 6 (PDF)</a>
+                    </div>
+                    <div class="hero">
+                        <div class="heroImg"><img src="assets/images/prototipo_diagrama.jpg"
+                                alt="Prototipo funcional: sistema de pesaje inteligente (diagrama)" /></div>
+                        <div class="heroImg"><img src="assets/images/flujo_operativo_poc.png"
+                                alt="Diagrama de secuencia: flujo operativo del PoC" /></div>
+                    </div>
+                    <div class="hr"></div>
+                    <div class="hero">
+                        <div class="heroImg"><img src="assets/images/cad_estacion.png" alt="CAD estación (captura)" />
+                        </div>
+                        <div class="heroImg"><img src="assets/images/estados_prototipo.png"
+                                alt="Estados del prototipo (Ready/Weighing/Payment)" /></div>
+                    </div>
+                </section>
 
-➡️ Ver: [Manifiesto de Innovación](00-manifiesto/index.md)
+                <section class="card section" id="modelos">
+                    <h3>Modelos 3D (demo)</h3>
+                    <p>
+                        Se incluye un <b>modelo GLB demo</b> para que el visor funcione en GitHub Pages.
+                        Puedes reemplazar el archivo por tu modelo real manteniendo el nombre:
+                        <span class="mono">assets/models/estacion.glb</span>
+                    </p>
+                    <div class="viewer">
+                        <div class="viewerHead">
+                            <div><b>Visor 3D</b> <small>(model-viewer)</small></div>
+                            <a class="btn" href="assets/models/estacion.glb" target="_blank" rel="noopener">⬇ Descargar
+                                GLB</a>
+                        </div>
+                        <div style="padding:10px;">
+                            <script type="module"
+                                src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+                            <model-viewer src="assets/models/estacion.glb" alt="Modelo 3D demo - Estación"
+                                camera-controls touch-action="pan-y" shadow-intensity="1"
+                                style="width:100%; height:520px; background: rgba(255,255,255,.02); border-radius: 14px;">
+                            </model-viewer>
+                            <div class="mono" style="margin-top:10px;">
+                                Reemplazo rápido: exporta tu modelo como GLB y súbelo con este nombre:
+                                <br /><b>assets/models/estacion.glb</b>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
-### 2) Blueprints de Ingeniería
-- Arquitectura Edge → LAN → Middleware → Persistencia → Apps
-- Modelos 3D (GLB) embebidos para revisión
-- Evidencia de simulación/validación (FEA/DES) y pruebas de campo
+                <section class="card section" id="evidencias">
+                    <h3>Evidencias y entregables (PDF)</h3>
+                    <p>Los PDFs se pueden previsualizar o descargar.</p>
 
-➡️ Ver: [Blueprints](01-blueprints/index.md)
+                    <div class="evidence">
+                        <div>
+                            <input id="search" class="input" placeholder="Buscar: actividad 3, actividad 4, codice final..." />
 
-### 3) Blindaje (Protección y viabilidad)
-- Propiedad Intelectual (estado del arte + estrategia + borrador)
-- Análisis financiero (TCO, ROI, sensibilidad)
+                            <div style="margin-top:10px; overflow:auto;">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Documento</th>
+                                            <th>Tipo</th>
+                                            <th>Tags</th>
+                                            <th>Acciones</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="evidenceRows"></tbody>
+                                </table>
+                            </div>
+                        </div>
 
-➡️ Ver: [Blindaje](02-blindaje/index.md)
+                        <div class="viewer">
+                            <div class="viewerHead">
+                                <div>
+                                    <b>Visor PDF</b><br />
+                                    <small id="viewerHint">Selecciona “Previsualizar” en un PDF</small>
+                                </div>
+                                <button class="btn" id="btnClearViewer">✖ Limpiar</button>
+                            </div>
+                            <iframe id="pdfFrame" class="viewerFrame" title="Visor PDF"></iframe>
+                        </div>
+                    </div>
+                </section>
 
-### 4) Despliegue y resiliencia
-- Plan roll-out (instalación física/digital)
-- BCP (continuidad, “modo manual”, RTO/RPO)
-- Ciberseguridad operacional
-- Auditoría ética y ganancia compartida
+                <section class="card section" id="imagenes">
+                    <h3>Imágenes (colección completa)</h3>
+                    <p>
+                        Se incluyen todas las imágenes extraídas de los documentos fuente dentro de:
+                        <span class="mono">assets/images/source/Actividad_*/</span>
+                    </p>
 
-➡️ Ver: [Despliegue y resiliencia](03-despliegue-resiliencia/index.md)
+                    <div class="actions">
+                        <a class="btn" href="galerias.html">🖼️ Abrir galerías</a>
+                        <a class="btn" href="galeria_Actividad_3.html">Actividad 3</a>
+                        <a class="btn" href="galeria_Actividad_4.html">Actividad 4</a>
+                        <a class="btn" href="galeria_Actividad_5.html">Actividad 5</a>
+                        <a class="btn" href="galeria_Actividad_6.html">Actividad 6</a>
+                        <a class="btn" href="galeria_Actividad_7.html">Actividad 7</a>
+                    </div>
 
-### 5) Cierre del Códice (reflexión crítica)
-- Lecciones aprendidas (fallas, pivotes, evidencia)
-- Roadmap V2.0 (siguiente evolución)
+                    <div class="mono" style="margin-top:10px;">
+                        Nota: GitHub Pages no permite “listar” carpetas como un servidor tradicional; esos enlaces
+                        funcionan si tu navegador muestra el
+                        contenido o si agregas un index.html por carpeta. Si prefieres, puedo generarte un
+                        “gallery.html” por cada Actividad.
+                    </div>
+                </section>
 
-➡️ Ver: [Cierre](04-cierre/index.md)
+                <footer>
+                    Hecho para GitHub Pages · 100% estático · <span id="updated"></span>
+                </footer>
+            </main>
+        </div>
+    </div>
 
----
+    <script>
+        const $ = (sel) => document.querySelector(sel);
+        const $$ = (sel) => Array.from(document.querySelectorAll(sel));
 
-## Evidencias (descargas oficiales)
-Todos los archivos (PDF/DOCX, hojas financieras, anexos, imágenes y modelos) están listados aquí:
+        // Theme
+        const themeBtn = $("#btnTheme");
+        const savedTheme = localStorage.getItem("theme") || "dark";
+        document.documentElement.dataset.theme = savedTheme;
+        themeBtn.addEventListener("click", () => {
+            const curr = document.documentElement.dataset.theme || "dark";
+            const next = curr === "dark" ? "light" : "dark";
+            document.documentElement.dataset.theme = next;
+            localStorage.setItem("theme", next);
+        });
 
-➡️ [Evidencias y entregables](evidencias/entregables.md)
+        // Print
+        $("#btnPrint").addEventListener("click", () => window.print());
+        $("#btnOpenEvidence").addEventListener("click", () => go("#evidencias"));
 
----
+        // Updated
+        $("#updated").textContent = "Última actualización: " + new Date().toLocaleDateString("es-VE", { year: "numeric", month: "long", day: "numeric" });
 
-## KPIs objetivo (rellenar con tus números)
-- **Tiempo promedio de descarga:** __-__%
-- **Throughput (camiones/hora):** __+__%
-- **Incidentes / reclamos:** __-__%
-- **Exactitud de registro de carga:** __+__%
-- **Disponibilidad operacional:** ____%
+        // Sidebar highlight
+        const navLinks = $$("#nav a");
+        function setActive(targetId) {
+            navLinks.forEach(a => a.classList.toggle("active", a.dataset.target === targetId));
+        }
+        const sections = $$(".section");
+        const io = new IntersectionObserver((entries) => {
+            entries.forEach(en => { if (en.isIntersecting) { setActive(en.target.id); } });
+        }, { threshold: 0.20 });
+        sections.forEach(s => io.observe(s));
 
----
+        function go(hash) {
+            location.hash = hash;
+            document.querySelector(hash)?.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
 
-## Contacto / equipo
-- Responsable técnico: ____
-- Responsable operaciones: ____
-- Responsable financiero: ____
-- Responsable social/ética: ____
+        // Evidence
+        const EVIDENCE = [
+            { title: "Actividad 3 (PDF)", type: "PDF", tags: ["blueprints", "cad", "arquitectura"], path: "assets/deliverables/Actividad_3.pdf", preview: true },
+            { title: "Actividad 4 (PDF)", type: "PDF", tags: ["prototipo", "flujo", "poc"], path: "assets/deliverables/Actividad_4.pdf", preview: true },
+            { title: "Actividad 5 (PDF)", type: "PDF", tags: ["blindaje", "finanzas", "pi"], path: "assets/deliverables/Actividad_5.pdf", preview: true },
+            { title: "Actividad 6 (PDF)", type: "PDF", tags: ["despliegue", "arquitectura", "middleware"], path: "assets/deliverables/Actividad_6.pdf", preview: true },
+            { title: "Actividad 7 / Códice Final (PDF)", type: "PDF", tags: ["codice", "final"], path: "assets/deliverables/Actividad_7.pdf", preview: true }
+        ];
 
-> Nota: Este repositorio es un “Códice Digital” diseñado para auditoría. La información sensible (si aplica) puede publicarse en versión anonimizada.
+        const rows = $("#evidenceRows");
+        const search = $("#search");
+        const frame = $("#pdfFrame");
+        const hint = $("#viewerHint");
+        $("#btnClearViewer").addEventListener("click", () => {
+            frame.src = "";
+            hint.textContent = "Selecciona “Previsualizar” en un PDF";
+        });
+
+        function badgeClass(t) {
+            const x = (t || "").toLowerCase();
+            if (x === "pdf") return "info";
+            return "";
+        }
+
+        function escapeHtml(s) {
+            return String(s).replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;").replaceAll("'", "&#039;");
+        }
+
+        function renderEvidence(filter = "") {
+            const q = filter.trim().toLowerCase();
+            rows.innerHTML = "";
+            EVIDENCE
+                .filter(e => {
+                    if (!q) return true;
+                    const hay = (e.title + " " + e.type + " " + (e.tags || []).join(" ")).toLowerCase();
+                    return hay.includes(q);
+                })
+                .forEach(e => {
+                    const tr = document.createElement("tr");
+
+                    const tdTitle = document.createElement("td");
+                    tdTitle.innerHTML = `<b>${escapeHtml(e.title)}</b><div style="margin-top:6px;color:var(--muted);font-family:var(--mono);font-size:12px;">${escapeHtml(e.path)}</div>`;
+                    tr.appendChild(tdTitle);
+
+                    const tdType = document.createElement("td");
+                    tdType.innerHTML = `<span class="badge ${badgeClass(e.type)}">${escapeHtml(e.type)}</span>`;
+                    tr.appendChild(tdType);
+
+                    const tdTags = document.createElement("td");
+                    tdTags.innerHTML = (e.tags || []).map(t => `<span class="badge">${escapeHtml(t)}</span>`).join(" ");
+                    tr.appendChild(tdTags);
+
+                    const tdAct = document.createElement("td");
+                    const openBtn = document.createElement("a");
+                    openBtn.className = "btn";
+                    openBtn.textContent = "⬇ Abrir";
+                    openBtn.href = e.path;
+                    openBtn.target = "_blank";
+                    openBtn.rel = "noopener";
+                    tdAct.appendChild(openBtn);
+
+                    if (e.preview && (e.type || "").toLowerCase() === "pdf") {
+                        const prevBtn = document.createElement("button");
+                        prevBtn.className = "btn primary";
+                        prevBtn.style.marginLeft = "8px";
+                        prevBtn.textContent = "👁 Previsualizar";
+                        prevBtn.addEventListener("click", () => {
+                            frame.src = e.path;
+                            hint.textContent = e.title;
+                            go("#evidencias");
+                        });
+                        tdAct.appendChild(prevBtn);
+                    } else {
+                        const note = document.createElement("div");
+                        note.style.marginTop = "8px";
+                        note.style.color = "var(--muted)";
+                        note.style.fontSize = "12px";
+                        note.textContent = "Sin visor (descarga directa)";
+                        tdAct.appendChild(note);
+                    }
+
+                    tr.appendChild(tdAct);
+                    rows.appendChild(tr);
+                });
+
+            if (!rows.children.length) {
+                const tr = document.createElement("tr");
+                tr.innerHTML = `<td colspan="4" style="color:var(--muted);">No hay resultados para “${escapeHtml(filter)}”.</td>`;
+                rows.appendChild(tr);
+            }
+        }
+
+        search.addEventListener("input", (e) => renderEvidence(e.target.value));
+        renderEvidence("");
+
+        if (!location.hash) location.hash = "#inicio";
+        setActive(location.hash.replace("#", ""));
+    </script>
+</body>
+
+</html>

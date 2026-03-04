@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Arquitectura — El Sincronizador</title>
+  <link rel="stylesheet" href="assets/css/minimal.css">
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="top">
+      <div>
+        <h1 style="margin:0;">Arquitectura del Sincronizador</h1>
+        <div class="muted">Extraída de los entregables (Actividad 6). Página estática para auditoría.</div>
+      </div>
+      <div style="display:flex; gap:10px; flex-wrap:wrap;">
+        <a class="btn" href="index.html">← Volver al portal</a>
+        <a class="btn" href="assets/deliverables/Actividad_6.pdf" target="_blank" rel="noopener">Abrir Actividad 6
+          (PDF)</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2 style="margin-top:0;">Diagrama de interoperabilidad</h2>
+      <p class="muted">
+        Flujo principal: <b>Estación de descarga (sensores + app local)</b> → <b>Preprocesamiento</b> →
+        <b>Middleware</b> →
+        <b>Adaptador Legacy</b> → <b>Sistema contable</b>.
+      </p>
+      <img src="assets/images/arquitectura.png" alt="Arquitectura de interoperabilidad" />
+      <p class="muted" style="margin-top:10px;">
+        Archivo: <code>assets/images/arquitectura.png</code>
+      </p>
+    </div>
+
+    <div class="card">
+      <h2 style="margin-top:0;">Checklist para auditoría (CISO + Operaciones)</h2>
+      <ul>
+        <li><b>Integridad de datos:</b> validación de rangos, timestamps, firma/HMAC, control de reintentos.</li>
+        <li><b>Resiliencia:</b> buffer/cola, operación offline-first, reconciliación y “modo manual”.</li>
+        <li><b>Interoperabilidad:</b> traducción de formatos, reglas de negocio, adaptador a sistemas rígidos (CSV/XML
+          fijo).</li>
+        <li><b>Trazabilidad:</b> logs estructurados y auditoría de eventos.</li>
+      </ul>
+      <p class="muted">Evidencia completa en: <a href="assets/deliverables/Actividad_6.pdf" target="_blank"
+          rel="noopener">Actividad_6.pdf</a></p>
+    </div>
+
+    <div class="card">
+      <h2 style="margin-top:0;">Recursos vinculados</h2>
+      <ul>
+        <li><a href="assets/images/flujo_operativo_poc.png" target="_blank" rel="noopener">Diagrama de secuencia
+            (PoC)</a></li>
+        <li><a href="assets/images/prototipo_diagrama.jpg" target="_blank" rel="noopener">Diagrama del prototipo
+            (hardware)</a></li>
+      </ul>
+    </div>
+  </div>
+</body>
+
+</html>
